@@ -1,0 +1,17 @@
+[{
+    title : 'Date Formater',
+    properties : [{
+        name : 'formatFrom',
+        label : 'From Format',
+        type : 'textfield',
+        description :'Format in Java SimpleDateFormat',
+        required : 'true'
+    },
+    {
+        name : 'formatTo',
+        label : 'To Format',
+        type : 'textfield',
+        description :'Format in Java SimpleDateFormat',
+        required : 'true'
+    }]
+}]
