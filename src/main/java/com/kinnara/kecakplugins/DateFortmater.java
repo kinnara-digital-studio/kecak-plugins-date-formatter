@@ -26,7 +26,7 @@ public class DateFortmater extends DataListColumnFormatDefault{
 
     @Override
     public String getVersion() {
-        return "1.0.0";
+        return getClass().getPackage().getImplementationVersion();
     }
 
     @Override
@@ -41,10 +41,9 @@ public class DateFortmater extends DataListColumnFormatDefault{
        String resultDate =String.valueOf(value);
       
         try {
-           
            return  new SimpleDateFormat(formatTo).format(new SimpleDateFormat(formatFrom).parse(resultDate));
         } catch (ParseException ex) {
-            LogUtil.error(getClassName() , ex, ex.getMessage());   
+            //LogUtil.warn(getClassName() , ex.getMessage());
         }
                
         return  resultDate;

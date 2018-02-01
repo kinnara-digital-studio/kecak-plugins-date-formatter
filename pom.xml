@@ -4,7 +4,7 @@
     <groupId>com.kinnara.kecakplugins</groupId>
     <artifactId>kecak-plugins-date-formater</artifactId>
     <packaging>bundle</packaging>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <name>kecak-plugins-date-formater</name>
     <url>http://www.joget.org</url>
     <build>
