@@ -14,7 +14,7 @@ public class Activator implements BundleActivator {
         registrationList = new ArrayList<ServiceRegistration>();
 
         //Register plugin here
-        registrationList.add(context.registerService(DateFortmater.class.getName(), new DateFortmater(), null));
+        registrationList.add(context.registerService(DateFormatter.class.getName(), new DateFormatter(), null));
     }
 
     public void stop(BundleContext context) {

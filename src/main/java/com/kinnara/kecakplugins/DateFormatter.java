@@ -17,11 +17,11 @@ import org.joget.commons.util.LogUtil;
  *
  * @author Ramdan
  */
-public class DateFortmater extends DataListColumnFormatDefault{
+public class DateFormatter extends DataListColumnFormatDefault{
 
     @Override
     public String getName() {
-        return "Date Formater";
+        return "Date Formatter";
     }
 
     @Override
