@@ -1,17 +1,27 @@
-[{
-    title : 'Date Formater',
-    properties : [{
-        name : 'formatFrom',
-        label : 'From Format',
-        type : 'textfield',
-        description :'Format in Java SimpleDateFormat',
-        required : 'true'
-    },
+[
     {
-        name : 'formatTo',
-        label : 'To Format',
-        type : 'textfield',
-        description :'Format in Java SimpleDateFormat',
-        required : 'true'
-    }]
-}]
+        "title" : "Date Formater",
+        "properties" : [
+            {
+                "name" : "formatFrom",
+                "label" : "From Format",
+                "type" : "textfield",
+                "description" :"Format in Java SimpleDateFormat",
+                "required" : "true"
+            },
+            {
+                "name" : "formatTo",
+                "label" : "To Format",
+                "type" : "textfield",
+                "description" :"Format in Java SimpleDateFormat",
+                "required" : "true"
+            },
+            {
+                "name": "orderByFunction",
+                "label": "ORDER BY function",
+                "type": "textfield",
+                "description": "Statement to be placed in ORDER BY"
+            }
+        ]
+    }
+]

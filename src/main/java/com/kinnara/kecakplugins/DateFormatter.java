@@ -68,6 +68,14 @@ public class DateFormatter extends DataListColumnFormatDefault{
 
     @Override
     public String getSortAs(@Nonnull DataList dataList, @Nonnull DataListColumn column) {
-        return "cast(? as timestamp)";
+        return getOrderByFunction();
+    }
+
+    protected String getOrderByFunction() {
+        return ifEmpty(getPropertyString("orderByFunction"), "cast(? as timestamp)");
+    }
+
+    protected String ifEmpty(String value, String failover) {
+        return value == null || value.isEmpty() ? failover : value;
     }
 }
