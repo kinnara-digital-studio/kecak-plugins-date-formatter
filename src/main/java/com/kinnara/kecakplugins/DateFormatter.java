@@ -13,6 +13,8 @@ import org.joget.apps.datalist.model.DataListColumn;
 import org.joget.apps.datalist.model.DataListColumnFormatDefault;
 import org.joget.commons.util.LogUtil;
 
+import javax.annotation.Nonnull;
+
 /**
  *
  * @author Ramdan
@@ -63,5 +65,9 @@ public class DateFormatter extends DataListColumnFormatDefault{
     public String getPropertyOptions() {
         return AppUtil.readPluginResource(getClass().getName(), "/properties/DateFormater.json", null, true, null);
     }
-    
+
+    @Override
+    public String getSortAs(@Nonnull DataList dataList, @Nonnull DataListColumn column) {
+        return "cast(? as timestamp)";
+    }
 }
