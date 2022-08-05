@@ -1,6 +1,6 @@
 [
     {
-        "title" : "Date Formater",
+        "title" : "Date Formatter",
         "properties" : [
             {
                 "name" : "formatFrom",
