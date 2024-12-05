@@ -7,11 +7,14 @@ package com.kinnarastudio.kecakplugins;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ResourceBundle;
+
 import org.joget.apps.app.service.AppUtil;
 import org.joget.apps.datalist.model.DataList;
 import org.joget.apps.datalist.model.DataListColumn;
 import org.joget.apps.datalist.model.DataListColumnFormatDefault;
 import org.joget.commons.util.LogUtil;
+import org.joget.plugin.base.PluginManager;
 
 import javax.annotation.Nonnull;
 
@@ -21,14 +24,19 @@ import javax.annotation.Nonnull;
  */
 public class DateFormatter extends DataListColumnFormatDefault{
 
+    public final static String LABEL = "Date Formatter";
+
     @Override
     public String getName() {
-        return "Date Formatter";
+        return LABEL;
     }
 
     @Override
     public String getVersion() {
-        return getClass().getPackage().getImplementationVersion();
+        PluginManager pluginManager = (PluginManager) AppUtil.getApplicationContext().getBean("pluginManager");
+        ResourceBundle resourceBundle = pluginManager.getPluginMessageBundle(getClassName(), "/messages/BuildNumber");
+        String buildNumber = resourceBundle.getString("buildNumber");
+        return buildNumber;
     }
 
     @Override
@@ -53,7 +61,7 @@ public class DateFormatter extends DataListColumnFormatDefault{
 
     @Override
     public String getLabel() {
-        return getName();
+        return LABEL;
     }
 
     @Override
