@@ -1,4 +1,4 @@
-package com.kinnara.kecakplugins;
+package com.kinnarastudio.kecakplugins;
 
 import java.util.ArrayList;
 import java.util.Collection;
